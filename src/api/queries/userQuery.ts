@@ -12,7 +12,7 @@ export class userQuery extends AbstractGraphQLQuery<GraphQLContext<any, any>, Us
     public allow = {};
     public args = {
         id: {
-            type: GraphQLString!,
+            type: GraphQLString,
             description: "id de la wea",
             required: true
         }

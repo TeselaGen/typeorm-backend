@@ -5,15 +5,24 @@ import { AbstractGraphQLQuery, GraphQLContext, Query } from '../../lib/graphql';
 import { UserService } from '../services/UserService';
 import { userCursorResult } from '../resultTypes/userCursorResult';
 import { UserCustorResultModel } from '../resultModels/UserCustorResult';
+import cursorFilterType from '../types/cursorFilterType';
 
 // import { UserType } from '../types/UserType';
 
+// import { GraphQLJSON } from 'graphql-type-json';
 
 @Query()
 export class usersQuery extends AbstractGraphQLQuery<GraphQLContext<any, any>, UserCustorResultModel, any> implements GraphQLFieldConfig {
     public type = userCursorResult;
     public allow = [];
-    public args = {};
+    public args = {
+        filter: {
+            type: cursorFilterType,
+            description: "filtro de la wea",
+            required: true
+        }
+    };
+
 
     constructor(
         private userService: UserService,
