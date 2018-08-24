@@ -13,7 +13,7 @@ export class userQuery extends AbstractGraphQLQuery<GraphQLContext<any, any>, Us
     public args = {
         id: {
             type: GraphQLString,
-            description: "id de la wea",
+            description: "id user",
             required: true
         }
     };
