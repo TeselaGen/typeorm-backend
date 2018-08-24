@@ -18,7 +18,7 @@ export class User {
     public lastName: string;
 
     @Column({ name: 'gender' })
-    public geder: string;
+    public gender: string;
 
     @IsNotEmpty()
     @Column()

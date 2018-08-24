@@ -23,6 +23,10 @@ const UserFields: GraphQLFieldConfigMap = {
         type: GraphQLString,
         description: 'The email of this user.',
     },
+    gender: {
+        type: GraphQLString,
+        description: 'Gender of the user.',
+    },
 };
 
 export const UserType = new GraphQLObjectType({

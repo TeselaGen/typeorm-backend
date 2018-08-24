@@ -490,6 +490,9 @@
                 "email": {
                     "type": "string"
                 },
+                "gender": {
+                    "type": "string"
+                },
                 "picture": {
                     "type": "string"
                 }
